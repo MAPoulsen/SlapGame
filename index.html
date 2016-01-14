@@ -1,62 +1,49 @@
 <html>
+
 <head>
-	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="/assets/styles/style.css">
-	<link rel="stylesheet" href="/assets/scripts/apps.js">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>TheSlapGame</title>
+    <<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+        crossorigin="anonymous">
 
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/assets/styles/game.css">
+       
 </head>
 
-
 <body>
-    <!--header start-->
     <div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
+        <!-- Default panel contents -->
+        <div class="panel-heading"> The Slap Game</div> 
+            <br><span>Player Health</span><span id="player-health"></span><br><span>Player Name</span><span id="playerName"></span><br><span>Hits</span>
+            <span id="playerHits"></span>
+        </div>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-  </div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
-    <!--header end-->
-    
-    <!--bootstrap body panel start-->
-    <img src="http://orig02.deviantart.net/297c/f/2007/099/6/3/monk_stick_figure_by_wrpigeek.png"/>
-Copy
-<div class="panel panel-default">
-  <div class="panel-body">
-    Basic panel example
-  </div>
-</div>
-    <!--bootstrap body panel stop-->
-    
-    <!--Bootstrap footer start-->
-    <div class="panel panel-default">
-  <div class="panel-body">
-    Panel content
-  </div>
-  <div class="panel-footer">Panel footer</div>
-</div>
-    <!--bootstrap footer end-->
-    
-	<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
-    
-    <script>
-        var ctx=document getElementById("ctx").getContext("2D");
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <div class="panel-body">
+            <img src="http://www.clipartbest.com/cliparts/Rcd/6kL/Rcd6kLXc9.png" height="200 px" src="img/stick.jpg" />
+            <div class="panel-footer">
+                <button type="button" onclick="slap()" class="btn btn-primary">Slap</button>
+                <button type="button" onclick="punch()" class="btn btn-primary">Punch</button>
+                <button type="button" onclick="kick()" class="btn btn-primary">Kick</button>
+            </div>
 
+        </div>
+
+        <!-- Table -->
+        <table class="table">
+
+        </table>
+    </div>
+
+
+     <script src="/assets/scripts/game.js"></script>
 </body>
+
 </html>
