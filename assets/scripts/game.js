@@ -1,75 +1,110 @@
-var health = 100;
 
-var hits = 0;
+var items = {
+    shield:new Item("shield",0.3,"This is an awesome shield!"),
+    armor:new Item("armor",0.4,"This is awesome armor!"),
+    sword:new Item("sword", 0.5, "This is an awesome sword!"),
+    potion:new Item("potion", 0.7,"This is an awesome potion!"),
+}
+var player = {
+    health: 100,
+    hits: 0,
+    items:[items.shield],
+    addMods: function(params) {
+        var total=0;
+        for(var i=0;i< this.items.length;i++) {
+            total = total + this.items[i].modifier;
+        }  
+        return total; 
+    }
+}
  
-var playerHealth = document.getElementById("player-health");
+ var player = {
+    health: 100,
+    hits: 0,
+    items:[items.armor],
+    addMods: function(params) {
+        var total=0;
+        for(var i=0;i< this.items.length;i++) {
+            total = total + this.items[i].modifier;
+        }  
+        return total; 
+    }
+}
  
-var hitsIncrease = document.getElementById("playerHits");
+  var player = {
+    health: 100,
+    hits: 0,
+    items:[items.sword],
+    addMods: function(params) {
+        var total=0;
+        for(var i=0;i< this.items.length;i++) {
+            total = total + this.items[i].modifier;
+        }  
+        return total; 
+    }
+}
  
+  var player = {
+    health: 100,
+    hits: 0,
+    items:[items.potion],
+    addMods: function(params) {
+        var total=0;
+        for(var i=0;i< this.items.length;i++) {
+            total = total + this.items[i].modifier;
+        }  
+        return total; 
+    }
+}
+//  Adding modds for weapons above
  
  function slap(){
-     health = health - 1; 
-     hits = hits +1;
+     player.health = player.health - (10 - (1 * player.addMods())); 
+     player.hits = player.hits +1;
      upDate();
      }
   
  function punch(){
-     health = health - 5; 
-     hits = hits +1;
+     player.health = player.health - (10 - (5 * player.addMods())); 
+     player.hits = player.hits +1;
      upDate();
      }
      
  function kick(){
-     health = health - 10; 
-     hits = hits +1;
-     upDate();
+     player.health = player.health - (10 - (10 * player.addMods())); 
+     player.hits = player.hits +1;
+     upDate();    
      }
  
-//  Jake how does this work? inner text and .tostring?
+// update function
  function upDate(){
-     playerHealth.innerText = health.toString(); 
-     hitsIncrease.innerText = hits.toString();
+     var playerHealth = document.getElementById("player-health");
+     playerHealth.innerText = player.health.toString();
+     var hitsIncrease = document.getElementById("playerHits");
+     hitsIncrease.innerText = player.hits.toString();
+     if(player.health <= 10){
+         document.getElementById("player-panel").classList.add("panel-danger")
+    }else{
+         document.getElementById("player-panel").classList.remove("panel-danger")
+    }
+     if(player.health === 0){
+       alert: "You are dead!";    
+    }
  }
- 
+// update functions above
+// new objects to 
+
+function Item (name, modifier, description) {
+    this.name = name;
+    this.modifier = modifier;
+    this.description = description;
+    this.draw = function(){
+     document.getElemById("player-items")
+    }
+}
  
  upDate();
 
 
   
-// //  Rob code 
-//   var update = document.getElementById('playerHealth');
-//   function updateHealth(){
-//      update.innerText = health.toString()    
-//      update.innerText = playerHealth.toString()    
-//   }
-  
-//   var displayHits = document.getElementById('playerHits');
-//   function updateHits(){
-//      displayHits.innerText = hits.toString()    
-//       displayHits.innerText = playerHits.toString()    
-//   }
-  
-//   var displayName = document.getElementById('playerName');
-//  @@ -22,18 +22,21 @@ function slap(){
-//       playerHealth = playerHealth-1;
-//       playerHits = playerHits+1;
-//       updateHealth()
-//      updateHits()
-//   }
-  
-//   function punch(){
-//       playerHealth = playerHealth-5;
-//       playerHits = playerHits+1;
-//       updateHealth()
-//      updateHits()
-//   }
-  
-//   function kick(){
-//       playerHealth = playerHealth-10;
-//       playerHits = playerHits+1;
-//       updateHealth() 
-//      updateHits()
-//   }
-      
-//   updateName()
 

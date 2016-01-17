@@ -19,22 +19,29 @@
 </head>
 
 <body>
-    <div class="panel panel-default">
+    <div class="panel panel-default" id="player-panel">
         <!-- Default panel contents -->
-        <div class="panel-heading"> The Slap Game</div> 
-            <br><span>Player Health</span><span id="player-health"></span><br><span>Player Name</span><span id="playerName"></span><br><span>Hits</span>
+        <div class="panel-heading"> The Slap Game</div>
+            <br><span>Player Health </span><span id="player-health"></span><br><span>Player Name</span><span id="playerName"></span><br><span>Hits</span>
             <span id="playerHits"></span>
         </div>
 
-        <div class="panel-body">
+        <div class="player-panel"> 
+           
             <img src="http://www.clipartbest.com/cliparts/Rcd/6kL/Rcd6kLXc9.png" height="200 px" src="img/stick.jpg" />
             <div class="panel-footer">
                 <button type="button" onclick="slap()" class="btn btn-primary">Slap</button>
                 <button type="button" onclick="punch()" class="btn btn-primary">Punch</button>
                 <button type="button" onclick="kick()" class="btn btn-primary">Kick</button>
             </div>
+            <div class="item">
+                <button type="button" onclick="shield()" class="btn btn-primary">Shield</button>
+                <button type="button" onclick="armor()" class="btn btn-primary">Armor</button>
+                <button type="button" onclick="sword()" class="btn btn-primary">Sword</button>
+                <button type="button" onclick="potion()" class="btn btn-primary">Potion</button>
+            </div>
 
-        </div>
+        
 
         <!-- Table -->
         <table class="table">
