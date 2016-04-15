@@ -1,0 +1,5 @@
+/*Only use this file if you want to override bootstrap or create your own style*/
+
+.row-2{
+    background-image:grey url(img/SlapGame.png) center center no-repeat;
+}
