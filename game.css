@@ -1,5 +1,89 @@
 /*Only use this file if you want to override bootstrap or create your own style*/
 
-.row-2{
-    background-image:grey url(img/SlapGame.png) center center no-repeat;
+h1{
+   font-family: 'Sancreek', cursive;   
+   color: e7ae22;
+   margin-top:0;
+   padding-top:10px;
+    height: 50px;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.container-fluid{
+    background:grey url(img/SlapGame.png) center center no-repeat;
+    background-size: cover;
+    height: 700px;
+    margin: 0 0 0 0;
+    position: relative;
+}
+.row{
+    text-align: center;
+}
+#hanz{
+text-align:center;
+margin-top:10px;
+}
+#franz{  
+text-align:center;
+margin-top:10px;
+}
+.rotate{
+    position: absolute;
+    bottom: -138px;
+    right: 271px;
+    width: 180px;
+}
+.rotate {
+    transition: all .5s linear;
+    margin-top: 100px;
+    width: 160px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+    /*float: center;*/
+}
+#spriteContainer{
+    background:grey transparent;
+      width: 400px;
+      height: 400px;
+}
+.franz-duck{
+      background-image: url("images/sprites_final.png"); 
+    -webkit-animation: play .6s steps(6) forwards;
+       -moz-animation: play .6s steps(6) forwards;
+        -ms-animation: play .6s steps(6) forwards;
+         -o-animation: play .6s steps(6) forwards;
+            animation: play .6s steps(6) forwards;
+            animation-name: franz-duck;
+}
+    
+
+@-webkit-keyframes franz-duck{
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-moz-keyframes franz-duck{
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-ms-keyframes franz-duck{
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-o-keyframes franz-duck{
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@keyframes franz-duck{
+   from { background-position:    0px; }
+     to { background-position: -500px; }
 }

@@ -10,8 +10,9 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
     crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Sancreek" rel="stylesheet" type="text/css">
     <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js">
     <link rel="stylesheet" href="game.css">
 
 </head>
@@ -19,20 +20,62 @@
 <body>
 
     <div class="container-fluid">
+        <div class="row">
+                <h1>Hanz and Franz</h1>
+                <button class="reset" onClick="reset()" type="button">Reset</button>
+            </div>
         <div class="row-1">
-            <header>
-
-            </header>
+            <div id="franz" class="col-xs-6 col-md-6">
+                <span class="well well-sm">
+                    <label class="well-1">Hanz Health</label>
+                    <button onClick="franzPunch()">Punch</punch>
+                    <button onClick="franzUpper()">Upper-Cut</button>
+                </span>
+            </div>
+            <div id="hanz" class="col-xs-6 col-md-6">
+                <span class="well well-sm">
+                    <label class="well-1">Franz Health</label>
+                    <button onClick="hanzPunch()">Punch</punch>
+                    <button onClick="hanzUpper()">Upper-cut</button>
+                </span>
+            </div>
         </div>
-        <div class="row-2">
-
-        </div>
-        <div class="row-3">
-            <footer>
-                <button onclick="slap()">Slap</button>
-            </footer>
+<div class="row-2">
+    <div id="franzy" class="col-xs-6 col-md-6">
+        <div class="progress rotate">
+            <div id="franz-health-bar" class="progress-bar  progress-bar-info  progress-bar-striped active" role="progressbar" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                <span class="sr-only">60% Complete</span>
+            </div>
         </div>
     </div>
+    <div id="hanzy" class="col-xs-6 col-md-6">
+        <div class="progress rotate">
+            <div id="hanz-health-bar" class="progress-bar  progress-bar-danger  progress-bar-striped active" role="progressbar" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                <span class="sr-only">60% Complete</span>
+            </div>
+        </div>
+        
+        </div>
+        </div>
+        <div class="row-3"> 
+            <!--<img src="img/duckSprite.png">-->
+             <div class='spriteContainer'>
+                
+        <img src="img.duckSprite.png" class="franz-duck" height="550" width="552">
+    
+             </div>
+        </div>
+    </div>
+
+
+
+    
+
+
+
+
 
 
 
