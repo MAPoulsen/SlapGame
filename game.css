@@ -49,25 +49,27 @@ margin-top:10px;
 }
 #spriteContainer{
     background:grey transparent;
-      width: 400px;
-      height: 400px;
+      width: 500px;
+      height: 500px;
+      top: 200px;
+      left: 200px;
 }
 .franz-duck{
-      background-image: url("images/sprites_final.png"); 
-    -webkit-animation: play .6s steps(6) forwards;
-       -moz-animation: play .6s steps(6) forwards;
-        -ms-animation: play .6s steps(6) forwards;
-         -o-animation: play .6s steps(6) forwards;
-            animation: play .6s steps(6) forwards;
+      background-image: url("img/duckSprite.png"); 
+    -webkit-animation: play .8s steps(6) forwards;
+       -moz-animation: play .8s steps(6) forwards;
+        -ms-animation: play .8s steps(6) forwards;
+         -o-animation: play .8s steps(6) forwards;
+            animation: play .8s steps(6) forwards;
             animation-name: franz-duck;
 }
     
 
 @-webkit-keyframes franz-duck{
-   from { background-position:    0px; }
+   from { background-position:    500px; }
      to { background-position: -500px; }
 }
-
+/*
 @-moz-keyframes franz-duck{
    from { background-position:    0px; }
      to { background-position: -500px; }
@@ -86,4 +88,4 @@ margin-top:10px;
 @keyframes franz-duck{
    from { background-position:    0px; }
      to { background-position: -500px; }
-}
+}*/
