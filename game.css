@@ -12,7 +12,7 @@ h1{
     padding-bottom: 0;
 }
 .container-fluid{
-    background:grey url(img/SlapGame.png) center center no-repeat;
+    background: url(img/SlapGame.png) center center no-repeat;
     background-size: cover;
     height: 700px;
     margin: 0 0 0 0;
@@ -44,11 +44,65 @@ margin-top:10px;
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-
-    /*float: center;*/
 }
-#spriteContainer{
-    background:grey transparent;
+
+.duck{
+    height: 531px;
+    width: 362px;
+    background: url('img/franzDuck.png') left center; 
+    animation: play .7s steps(7) backwards;  
+}
+@keyframes play {
+    100%{
+        background-position: -2474px;
+    }
+}
+/*
+#hi {
+    width: 50px;
+    height: 72px;
+    background-image: url("http://s.cdpn.io/79/sprite-steps.png");
+    
+    -webkit-animation: play .8s steps(10) forward;
+       -moz-animation: play .8s steps(10) forward;
+        -ms-animation: play .8s steps(10) forward;
+         -o-animation: play .8s steps(10) forward;
+            animation: play .8s steps(10) forward;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-ms-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -500px; }
+}
+
+
+
+
+.franz-duck img{
+    height: 300px;
+}*/
+
+/*.spriteContainer{
       width: 500px;
       height: 500px;
       top: 200px;
@@ -56,6 +110,7 @@ margin-top:10px;
 }
 .franz-duck{
       background-image: url("img/duckSprite.png"); 
+      background-size: 800px;
     -webkit-animation: play .8s steps(6) forwards;
        -moz-animation: play .8s steps(6) forwards;
         -ms-animation: play .8s steps(6) forwards;
@@ -66,10 +121,10 @@ margin-top:10px;
     
 
 @-webkit-keyframes franz-duck{
-   from { background-position:    500px; }
-     to { background-position: -500px; }
-}
-/*
+   from { background-position:    -30000px; }
+     to { background-position: 500px; }
+}*/
+/*/*
 @-moz-keyframes franz-duck{
    from { background-position:    0px; }
      to { background-position: -500px; }
@@ -88,4 +143,4 @@ margin-top:10px;
 @keyframes franz-duck{
    from { background-position:    0px; }
      to { background-position: -500px; }
-}*/
+}

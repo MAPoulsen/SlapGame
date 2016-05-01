@@ -1,6 +1,16 @@
 
 var hanzHealth = 100;
 var franzHealth = 100;
+   
+  function franzDuck(){
+    $("body").on('click', '.duck', function() {
+        document.getElementById('duck').play();
+       
+    })
+console.log('Sprite was called')
+     
+  } 
+  
 
 function hanzResponses(){
   var choice = ['duck', 'block', 'dayDream', "takeHit",];
@@ -42,16 +52,18 @@ function franzPunch() {
     hanzResponses();
     hanzHealth -= 10;
     if (hanzHealth <= 0) {
-        alert("Franz wins!");
+        // alert("Franz wins!");
         reset();
     }
     update()
 }
+
 function hanzPunch() {
+     franzDuck();
     franzResponses();
     franzHealth -= 10;
     if (franzHealth <= 0) {
-        alert("Hanz wins!!!");
+        // alert("Hanz wins!!!");
         reset();
     }
     update()
@@ -60,7 +72,7 @@ function franzUpper() {
     hanzResponses();
     hanzHealth -= 20;
     if (hanzHealth <= 0) {
-        alert("Franz wins!");
+        // alert("Franz wins!");
         reset();
     }
     update()
@@ -69,7 +81,7 @@ function hanzUpper() {
     franzResponses();
     franzHealth -= 20;
     if (franzHealth <= 0) {
-        alert("Hanz wins!!!");
+        // alert("Hanz wins!!!");
         reset();
     }
     update()
