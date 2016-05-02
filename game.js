@@ -2,14 +2,35 @@
 var hanzHealth = 100;
 var franzHealth = 100;
    
-  function franzDuck(){
-    $("body").on('click', '.duck', function() {
-        document.getElementById('duck').play();
+//   function duck(){
+//     $("body").on('click', 'duck', function() {
+//         document.getElementById('duck').play();
        
-    })
-console.log('Sprite was called')
+//     })
+// console.log('Sprite was called')
      
-  } 
+//   } 
+function duck(){
+element = document.getElementById("duck");
+
+// reset the transition by...
+element.addEventListener("on-click", function(e){
+  e.preventDefault;
+  
+//   element.addEventListener("on-click", function(e){
+//   e.preventDefault;
+  // -> removing the class
+  element.classList.remove("run-animation");
+  
+  // -> triggering reflow /* The actual magic */
+  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+  element.offsetWidth = element.offsetWidth;
+  
+  // -> and re-adding the class
+  element.classList.add("run-animation");
+}, false);
+}
+duck()
   
 
 function hanzResponses(){
@@ -59,7 +80,7 @@ function franzPunch() {
 }
 
 function hanzPunch() {
-     franzDuck();
+     duck();
     franzResponses();
     franzHealth -= 10;
     if (franzHealth <= 0) {
