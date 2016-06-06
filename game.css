@@ -26,10 +26,17 @@ text-align:center;
 margin-top:10px;
 }
 
-#hanz img{
+#Hanz img{
     position: absolute;
-    top: 160px;
-    left: -94px;
+      top: 112px;
+    left: 168px;
+    height: 270px;
+}
+
+#Franz img{
+    position: absolute;
+      top: 112px;
+    left: 168px;
     height: 270px;
 }
 
