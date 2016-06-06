@@ -67,6 +67,8 @@ margin-top:10px;
 }
 #franz-health-bar{
     position: absolute;
+    top: 100px;
+    left: 100px;
 }
 
 
