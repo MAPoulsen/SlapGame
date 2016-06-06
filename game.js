@@ -136,7 +136,9 @@ function franzAnimateJab() {
 
 function hanzPunch() {
     hanzAnimatePunch();
-    franzResponses();
+    setTimeout(function () {
+        franzResponses();
+    }, 500);
     franzHealth -= 10;
     if (franzHealth <= 0) {
         // //alert("Hanz wins!!!");
@@ -145,8 +147,11 @@ function hanzPunch() {
     update();
 }
 function franzPunch() {
-franzAnimatePunch();
-    hanzResponses();
+    franzAnimatePunch();
+    setTimeout(function () {
+        hanzResponses();
+
+    }, 500)
     hanzHealth -= 10;
     if (hanzHealth <= 0) {
         // //alert("Franz wins!");
@@ -158,7 +163,10 @@ franzAnimatePunch();
 
 function franzJab() {
     franzAnimateJab();
-    hanzResponses();
+    setTimeout(function () {
+        hanzResponses();
+
+    }, 500)
     hanzHealth -= 20;
     if (hanzHealth <= 0) {
         // //alert("Franz wins!");
@@ -168,7 +176,10 @@ function franzJab() {
 }
 function hanzUpper() {
     hanzAnimateUpper();
-    franzResponses();
+    setTimeout(function () {
+
+        franzResponses();
+    }, 500)
     franzHealth -= 20;
     if (franzHealth <= 0) {
         // //alert("Hanz wins!!!");
