@@ -62,7 +62,9 @@ margin-top:10px;
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
-
+#franzy{
+    display: inline-block;
+}
 
 
 
