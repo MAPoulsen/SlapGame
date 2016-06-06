@@ -1,93 +1,94 @@
 
 var hanzHealth = 100;
 var franzHealth = 100;
- var victory = false;
- 
-   
-//  var paramsArray = [{
-//      name: "hanz",
-//      advance: ["<img src='img/hBopf.gif'>", "<img src='img/hUnder.gif'>" ],
-//      health: 100,
-//      img: "Hanz.png",
-//  },{
-//      name: "franz",
-//      advance: ["<img src='img/fJab.gif'>", "<img src='img/fPunch.gif'>" ],
-//      health: 100,
-//      img: "franz.png",
-     
-//  }]  
- 
-      
-function hanzResponses(){
-  var choice = ['duck', 'block', 'dayDream', "takeHit",];
-  var compChoice = choice[Math.floor(Math.random() * choice.length)];
+var victory = false;
 
- function hanzAnimateDuck(){
-          $('#hanz').empty();
-          $('#hanz').append('<img src="img/hDuck.gif">')
-          setTimeout(function(){
-              $('#hanz').empty();
-              $('#hanz').append('<img src="img/hanz.png">')
-          }, 500)
-      }
-function   hanzAnimateBlock(){
-          $('#hanz').empty();
-          $('#hanz').append('<img src="img/HanzBlock.gif">')
-          setTimeout(function(){
-              $('#hanz').empty();
-              $('#hanz').append('<img src="img/hanz.png">')
-          }, 500)
-      }
-  if(compChoice === "duck"){
-      hanzAnimateDuck();
+function update() {
+    var hanzHealthBarElem = document.getElementById('hanz-health-bar');
+    var franzHealthBarElem = document.getElementById('franz-health-bar');
+
+    hanzHealthBarElem.style.width = hanzHealth + '%';
+    franzHealthBarElem.style.width = franzHealth + '%'
+}
+
+function reset() {
+    hanzHealth = 100;
+    franzHealth = 100;
+    update()
+}
+
+
+
+function hanzResponses() {
+    var choice = ['duck', 'block', 'dayDream', "takeHit", ];
+    var compChoice = choice[Math.floor(Math.random() * choice.length)];
+
+    function hanzAnimateDuck() {
+        $('#Hanz').empty();
+        $('#Hanz').append('<img src="img/hDuck.gif">')
+        setTimeout(function () {
+            $('#Hanz').empty();
+            $('#Hanz').append('<img src="img/hanz.png">')
+        }, 500)
+    }
+    function hanzAnimateBlock() {
+        $('#Hanz').empty();
+        $('#Hanz').append('<img src="img/HanzBlock.gif">')
+        setTimeout(function () {
+            $('#Hanz').empty();
+            $('#Hanz').append('<img src="img/hanz.png">')
+        }, 500)
+    }
+    if (compChoice === "duck") {
+        hanzAnimateDuck();
         hanzHealth += 10;
-      //alert("He avoids his opponent by ducking!");
+        //alert("He avoids his opponent by ducking!");
     }
-    else if(compChoice === "block"){
-           hanzAnimateBlock();
-            hanzHealth += 5;
-      //alert("He avoids the hit with a block!");
-    }
-      update()
-    }
-
-
-
-
-  function franzResponses(){
-  var choice = ['duck', 'block', 'dayDream', "takeHit",];
-  var compChoice = choice[Math.floor(Math.random() * choice.length)];
-
- function franzAnimateDuck(){
-          $('#franz').empty();
-          $('#franz').append('<img src="img/fDuck.gif">')
-          setTimeout(function(){
-              $('#franz').empty();
-              $('#franz').append('<img src="img/franz.png">')
-          }, 500)
-      }
-function   franzAnimateBlock(){
-          $('#franz').empty();
-          $('#franz').append('<img src="img/fBlock.gif">')
-          setTimeout(function(){
-              $('#franz').empty();
-              $('#franz').append('<img src="img/franz.png">')
-          }, 500)
-      }
-      
-  if(compChoice === "duck"){
-      franzAnimateDuck();
-      franzHealth += 10;
-      //alert("He avoids his opponent by ducking!");
-    }
-    else if(compChoice === "block"){
-        franzAnimateBlock();
-      franzHealth += 5;
-     //alert("He avoids the hit with a block!");
+    else if (compChoice === "block") {
+        hanzAnimateBlock();
+        hanzHealth += 5;
+        //alert("He avoids the hit with a block!");
     }
     update()
-  }
-  franzResponses()
+}
+
+
+
+
+function franzResponses() {
+    var choice = ['duck', 'block', 'dayDream', "takeHit", ];
+    var compChoice = choice[Math.floor(Math.random() * choice.length)];
+
+    function franzAnimateDuck() {
+        $('#Franz').empty();
+        $('#Franz').append('<img src="img/fDuck.gif">')
+        setTimeout(function () {
+            $('#Franz').empty();
+            $('#Franz').append('<img src="img/franz.png">')
+        }, 500)
+    }
+    function franzAnimateBlock() {
+        $('#Franz').empty();
+        $('#Franz').append('<img src="img/fBlock.gif">')
+        setTimeout(function () {
+            $('#Franz').empty();
+            $('#Franz').append('<img src="img/franz.png">')
+        }, 500)
+    }
+
+    if (compChoice === "duck") {
+        franzAnimateDuck();
+        franzHealth += 10;
+        //alert("He avoids his opponent by ducking!");
+    }
+    else if (compChoice === "block") {
+        franzAnimateBlock();
+        franzHealth += 5;
+        //alert("He avoids the hit with a block!");
+    }
+    update()
+}
+//   franzResponses()
 
 //   function hanzAnimate(bop){
 //       $('#hanz').empty();
@@ -97,37 +98,54 @@ function   franzAnimateBlock(){
 //             $('#hanz').append('<img src="img/Hanz.png">')
 //       }, 500)
 //   }
- function hanzAnimatePunch(){
-          $('#hanz').empty();
-          $('#hanz').append('<img src="img/hBopf.gif">')
-          setTimeout(function(){
-              $('#hanz').empty();
-              $('#hanz').append('<img src="img/hanz.png">')
-          }, 500)
-      }
-function   hanzAnimateUpper(){
-          $('#hanz').empty();
-          $('#hanz').append('<img src="img/hUnder.gif">')
-          setTimeout(function(){
-              $('#hanz').empty();
-              $('#hanz').append('<img src="img/hanz.png">')
-          }, 500)
-      }
+function hanzAnimatePunch() {
+    $('#Hanz').empty();
+    $('#Hanz').append('<img src="img/hBopf.gif">')
+    setTimeout(function () {
+        $('#Hanz').empty();
+        $('#Hanz').append('<img src="img/hanz.png">')
+    }, 500)
+}
+function hanzAnimateUpper() {
+    $('#Hanz').empty();
+    $('#Hanz').append('<img src="img/hUnder.gif">')
+    setTimeout(function () {
+        $('#Hanz').empty();
+        $('#Hanz').append('<img src="img/hanz.png">')
+    }, 500)
+}
+
+function franzAnimatePunch() {
+    $('#Franz').empty();
+    $('#Franz').append('<img src="img/fPunch.gif">')
+    setTimeout(function () {
+        $('#Franz').empty();
+        $('#Franz').append('<img src="img/franz.png">')
+    }, 500)
+}
+function franzAnimateJab() {
+    $('#Franz').empty();
+    $('#Franz').append('<img src="img/fJab.gif">')
+    setTimeout(function () {
+        $('#Franz').empty();
+        $('#Franz').append('<img src="img/franz.png">')
+    }, 500)
+}
 
 
 
 function hanzPunch() {
-    hanzAnimatePunch()
+    hanzAnimatePunch();
     franzResponses();
     franzHealth -= 10;
     if (franzHealth <= 0) {
         // //alert("Hanz wins!!!");
         reset();
     }
-    update()
+    update();
 }
 function franzPunch() {
-    
+franzAnimatePunch();
     hanzResponses();
     hanzHealth -= 10;
     if (hanzHealth <= 0) {
@@ -138,7 +156,8 @@ function franzPunch() {
 }
 
 
-function franzUpper() {
+function franzJab() {
+    franzAnimateJab();
     hanzResponses();
     hanzHealth -= 20;
     if (hanzHealth <= 0) {
@@ -148,7 +167,7 @@ function franzUpper() {
     update()
 }
 function hanzUpper() {
-    hanzAnimateUpper()
+    hanzAnimateUpper();
     franzResponses();
     franzHealth -= 20;
     if (franzHealth <= 0) {
@@ -158,20 +177,8 @@ function hanzUpper() {
     update()
 }
 
-function reset() {
-    hanzHealth = 100;
-    franzHealth = 100;
-    update()
-}
 
 // healthbar
-function update() {
-    var hanzHealthBarElem = document.getElementById('hanz-health-bar');
-    var franzHealthBarElem = document.getElementById('franz-health-bar');
-
-    hanzHealthBarElem.style.width = hanzHealth + '%';
-    franzHealthBarElem.style.width = franzHealth + '%'
-}
 
 // working code
 
@@ -221,10 +228,10 @@ function update() {
 //     potion:new Item("potion", 0.7,"This is an awesome potion!"),
 // }
 
- var Hanz = {
-        name: "Hanz",
-        health: 100,
-    img: src="img/Hanz.png",
+//  var Hanz = {
+//         name: "Hanz",
+//         health: 100,
+//     img: src="img/Hanz.png",
 //     items:[items.armor],
 //     addMods: function(params) {
 //         var total=0;
@@ -309,13 +316,13 @@ function update() {
 
 //  upDate();
 
-function attack (name, modifier, description){
-    this.name = name;
-    this.modifier = modifier;
-    this.description = description;
-    this.draw= function(){
-       document.getElemById('player-items') 
-    }
-}
+// function attack (name, modifier, description){
+//     this.name = name;
+//     this.modifier = modifier;
+//     this.description = description;
+//     this.draw= function(){
+//        document.getElemById('player-items') 
+//     }
+// }
 
 
