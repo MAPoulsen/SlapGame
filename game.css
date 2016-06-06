@@ -25,6 +25,14 @@ h1{
 text-align:center;
 margin-top:10px;
 }
+
+#hanz img{
+    position: absolute;
+    top: 160px;
+    left: -94px;
+    height: 270px;
+}
+
 #franz{  
 text-align:center;
 margin-top:10px;
@@ -46,9 +54,11 @@ margin-top:10px;
     transform: rotate(-90deg);
 }
 
+#hanz{
+    
+}
 
-
-
+/*
 @keyframes play {        
   100%{
         background-position: -2474px;
@@ -57,10 +67,11 @@ margin-top:10px;
 .run-animation {
  
   animation: play .7s steps(7) backwards;
-}
-#duck {
+}*/
+/*#duck {
    height: 531px;
     width: 362px;
     background: url('img/franzDuck.png') left center;
-}
+    cursor: pointer;
+}*/
 

@@ -10,27 +10,27 @@ var franzHealth = 100;
 // console.log('Sprite was called')
      
 //   } 
-function duck(){
-element = document.getElementById("duck");
-
-// reset the transition by...
-element.addEventListener("on-click", function(e){
-  e.preventDefault;
+// function duck(){
+// element = document.getElementById("duck");
+// // debugger
+// // reset the transition by...
+// // element.addEventListener("on-click", function(e){
+// //   e.preventDefault;
   
-//   element.addEventListener("on-click", function(e){
-//   e.preventDefault;
-  // -> removing the class
-  element.classList.remove("run-animation");
+//   element.addEventListener("onclick", function(e){
+// //   e.preventDefault;
+//   // -> removing the class
+//   element.classList.remove("run-animation");
   
-  // -> triggering reflow /* The actual magic */
-  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-  element.offsetWidth = element.offsetWidth;
+//   // -> triggering reflow /* The actual magic */
+//   // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+//   element.offsetWidth = element.offsetWidth;
   
-  // -> and re-adding the class
-  element.classList.add("run-animation");
-}, false);
-}
-duck()
+//   // -> and re-adding the class
+//   element.classList.add("run-animation");
+// }, false);
+// }
+// duck()
   
 
 function hanzResponses(){
@@ -39,16 +39,25 @@ function hanzResponses(){
 
   if(compChoice === "duck"){
       hanzHealth += 10;
-      alert("He avoids his opponent by ducking!");
+      //alert("He avoids his opponent by ducking!");
     }
     else if(compChoice === "block"){
       hanzHealth += 5;
-      alert("He avoids the hit with a block!");
+      //alert("He avoids the hit with a block!");
     }
-  update()
+      hanzAnimate(compChoice)
+      update()
     }
 
-  hanzResponses()
+  function hanzAnimate(type){
+      $('#hanz').empty();
+      $('#hanz').append('<img src="img/hBopf.gif">')
+      setTimeout(function(){
+            $('#hanz').empty();
+            $('#hanz').append('<img src="img/Hanz.png">')
+      }, 500)
+  }
+
 
   function franzResponses(){
   var choice = ['duck', 'block', 'dayDream', "takeHit",];
@@ -56,11 +65,11 @@ function hanzResponses(){
 
   if(compChoice === "duck"){
       franzHealth += 10;
-      alert("He avoids his opponent by ducking!");
+      //alert("He avoids his opponent by ducking!");
     }
     else if(compChoice === "block"){
       franzHealth += 5;
-     alert("He avoids the hit with a block!");
+     //alert("He avoids the hit with a block!");
     }
     update()
   }
@@ -73,7 +82,7 @@ function franzPunch() {
     hanzResponses();
     hanzHealth -= 10;
     if (hanzHealth <= 0) {
-        // alert("Franz wins!");
+        // //alert("Franz wins!");
         reset();
     }
     update()
@@ -84,7 +93,7 @@ function hanzPunch() {
     franzResponses();
     franzHealth -= 10;
     if (franzHealth <= 0) {
-        // alert("Hanz wins!!!");
+        // //alert("Hanz wins!!!");
         reset();
     }
     update()
@@ -93,7 +102,7 @@ function franzUpper() {
     hanzResponses();
     hanzHealth -= 20;
     if (hanzHealth <= 0) {
-        // alert("Franz wins!");
+        // //alert("Franz wins!");
         reset();
     }
     update()
@@ -102,7 +111,7 @@ function hanzUpper() {
     franzResponses();
     franzHealth -= 20;
     if (franzHealth <= 0) {
-        // alert("Hanz wins!!!");
+        // //alert("Hanz wins!!!");
         reset();
     }
     update()
@@ -240,7 +249,7 @@ function update() {
 //          document.getElementById("player-panel").classList.remove("panel-danger")
 //     }
 //      if(player.health === 0){
-//        alert: "You are dead!";    
+//        //alert: "You are dead!";    
 //     }
 //  }
 // // update functions above
