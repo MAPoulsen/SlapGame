@@ -117,7 +117,7 @@ function hanzAnimateUpper() {
 
 function franzAnimatePunch() {
     $('#Franz').empty();
-    $('#Franz').append('<img src="img/fPunch.gif" style="height: 90%">')
+    $('#Franz').append('<img src="img/fPunch.gif">')
     setTimeout(function () {
         $('#Franz').empty();
         $('#Franz').append('<img src="img/franz.png">')
