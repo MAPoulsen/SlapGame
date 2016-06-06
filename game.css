@@ -22,6 +22,7 @@ h1{
     text-align: center;
 }
 #hanz{
+    margin: auto;
 text-align:center;
 margin-top:10px;
 }
@@ -41,6 +42,7 @@ margin-top:10px;
 }
 
 #franz{  
+    margin: auto;
 text-align:center;
 margin-top:10px;
 }
