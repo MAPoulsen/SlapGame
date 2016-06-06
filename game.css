@@ -65,6 +65,8 @@ margin-top:10px;
 #franzy{
     display: center-block;
 }
-
+#franz-health-bar{
+    position: absolute;
+}
 
 
