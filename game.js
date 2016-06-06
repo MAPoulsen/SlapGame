@@ -4,19 +4,24 @@ var franzHealth = 100;
  var victory = false;
  
    
- var paramsArray = [{
-     name: "hanz",
-     advance: ["<img src='img/hBopf.gif'>", "<img src='img/hUnder.gif'>" ],
-     health: 100,
-     img: "Hanz.png",
- },{
-     name: "franz",
-     advance: ["<img src='img/fJab.gif'>", "<img src='img/fPunch.gif'>" ],
-     health: 100,
-     img: "franz.png",
+//  var paramsArray = [{
+//      name: "hanz",
+//      advance: ["<img src='img/hBopf.gif'>", "<img src='img/hUnder.gif'>" ],
+//      health: 100,
+//      img: "Hanz.png",
+//  },{
+//      name: "franz",
+//      advance: ["<img src='img/fJab.gif'>", "<img src='img/fPunch.gif'>" ],
+//      health: 100,
+//      img: "franz.png",
      
- }]  
+//  }]  
  
+      
+function hanzResponses(){
+  var choice = ['duck', 'block', 'dayDream', "takeHit",];
+  var compChoice = choice[Math.floor(Math.random() * choice.length)];
+
  function hanzAnimateDuck(){
           $('#hanz').empty();
           $('#hanz').append('<img src="img/hDuck.gif">')
@@ -33,19 +38,6 @@ function   hanzAnimateBlock(){
               $('#hanz').append('<img src="img/hanz.png">')
           }, 500)
       }
-      
-function hanzResponses(){
-  var choice = ['duck', 'block', 'dayDream', "takeHit",];
-  var compChoice = choice[Math.floor(Math.random() * choice.length)];
-
-  function hanzAnimate(bop){
-      $('#hanz').empty();
-      $('#hanz').append('<img src="img/hBopf.gif">')
-      setTimeout(function(){
-            $('#hanz').empty();
-            $('#hanz').append('<img src="img/Hanz.png">')
-      }, 500)
-  }
   if(compChoice === "duck"){
       hanzAnimateDuck();
         hanzHealth += 10;
@@ -66,20 +58,6 @@ function hanzResponses(){
   var choice = ['duck', 'block', 'dayDream', "takeHit",];
   var compChoice = choice[Math.floor(Math.random() * choice.length)];
 
-  if(compChoice === "duck"){
-      franzAnimateDuck();
-      franzHealth += 10;
-      //alert("He avoids his opponent by ducking!");
-    }
-    else if(compChoice === "block"){
-        franzAnimateBlock();
-      franzHealth += 5;
-     //alert("He avoids the hit with a block!");
-    }
-    update()
-  }
-  franzResponses()
-
  function franzAnimateDuck(){
           $('#franz').empty();
           $('#franz').append('<img src="img/fDuck.gif">')
@@ -96,13 +74,60 @@ function   franzAnimateBlock(){
               $('#franz').append('<img src="img/franz.png">')
           }, 500)
       }
+      
+  if(compChoice === "duck"){
+      franzAnimateDuck();
+      franzHealth += 10;
+      //alert("He avoids his opponent by ducking!");
+    }
+    else if(compChoice === "block"){
+        franzAnimateBlock();
+      franzHealth += 5;
+     //alert("He avoids the hit with a block!");
+    }
+    update()
+  }
+  franzResponses()
+
+//   function hanzAnimate(bop){
+//       $('#hanz').empty();
+//       $('#hanz').append('<img src="img/hBopf.gif">')
+//       setTimeout(function(){
+//             $('#hanz').empty();
+//             $('#hanz').append('<img src="img/Hanz.png">')
+//       }, 500)
+//   }
+ function hanzAnimatePunch(){
+          $('#hanz').empty();
+          $('#hanz').append('<img src="img/hBopf.gif">')
+          setTimeout(function(){
+              $('#hanz').empty();
+              $('#hanz').append('<img src="img/hanz.png">')
+          }, 500)
+      }
+function   hanzAnimateUpper(){
+          $('#hanz').empty();
+          $('#hanz').append('<img src="img/hUnder.gif">')
+          setTimeout(function(){
+              $('#hanz').empty();
+              $('#hanz').append('<img src="img/hanz.png">')
+          }, 500)
+      }
 
 
 
-
-
-
+function hanzPunch() {
+    hanzAnimatePunch()
+    franzResponses();
+    franzHealth -= 10;
+    if (franzHealth <= 0) {
+        // //alert("Hanz wins!!!");
+        reset();
+    }
+    update()
+}
 function franzPunch() {
+    
     hanzResponses();
     hanzHealth -= 10;
     if (hanzHealth <= 0) {
@@ -112,16 +137,7 @@ function franzPunch() {
     update()
 }
 
-function hanzPunch() {
-     duck();
-    franzResponses();
-    franzHealth -= 10;
-    if (franzHealth <= 0) {
-        // //alert("Hanz wins!!!");
-        reset();
-    }
-    update()
-}
+
 function franzUpper() {
     hanzResponses();
     hanzHealth -= 20;
@@ -132,6 +148,7 @@ function franzUpper() {
     update()
 }
 function hanzUpper() {
+    hanzAnimateUpper()
     franzResponses();
     franzHealth -= 20;
     if (franzHealth <= 0) {
