@@ -125,7 +125,7 @@ function franzAnimatePunch() {
 }
 function franzAnimateJab() {
     $('#Franz').empty();
-    $('#Franz').append('<img src="img/fJab.gif">')
+    $('#Franz').append('<img src="img/fJab.gif" style="height: 90%;>')
     setTimeout(function () {
         $('#Franz').empty();
         $('#Franz').append('<img src="img/franz.png">')
