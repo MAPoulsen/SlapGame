@@ -1,55 +1,57 @@
 
 var hanzHealth = 100;
 var franzHealth = 100;
+ var victory = false;
+ 
    
-//   function duck(){
-//     $("body").on('click', 'duck', function() {
-//         document.getElementById('duck').play();
-       
-//     })
-// console.log('Sprite was called')
+ var paramsArray = [{
+     name: "hanz",
+     advance: ["hBopf.gif", "hUnder.gif" ],
+     health: 100,
+     img: "Hnaz.png",
+ },{
+       name: "franz",
+     advance: ["fJab.gif", "fPunch.gif" ],
+     health: 100,
+     img: "Hanz.png",
      
-//   } 
-// function duck(){
-// element = document.getElementById("duck");
-// // debugger
-// // reset the transition by...
-// // element.addEventListener("on-click", function(e){
-// //   e.preventDefault;
-  
-//   element.addEventListener("onclick", function(e){
-// //   e.preventDefault;
-//   // -> removing the class
-//   element.classList.remove("run-animation");
-  
-//   // -> triggering reflow /* The actual magic */
-//   // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-//   element.offsetWidth = element.offsetWidth;
-  
-//   // -> and re-adding the class
-//   element.classList.add("run-animation");
-// }, false);
-// }
-// duck()
-  
-
+ }]  
+ 
+ function hanzAnimateDuck(){
+          $('#hanz').empty();
+          $('#hanz').append('<img src="img/hDuck.gif">')
+          setTimeout(function(){
+              $('#hanz').empty();
+              $('#hanz').append('<img src="img/hanz.png">')
+          }, 500)
+      }
+function   hanzAnimateBlock(){
+          $('#hanz').empty();
+          $('#hanz').append('<img src="img/HanzBlock.gif">')
+          setTimeout(function(){
+              $('#hanz').empty();
+              $('#hanz').append('<img src="img/hanz.png">')
+          }, 500)
+      }
 function hanzResponses(){
   var choice = ['duck', 'block', 'dayDream', "takeHit",];
   var compChoice = choice[Math.floor(Math.random() * choice.length)];
 
   if(compChoice === "duck"){
-      hanzHealth += 10;
+      hanzAnimateDuck();
+        hanzHealth += 10;
       //alert("He avoids his opponent by ducking!");
     }
     else if(compChoice === "block"){
-      hanzHealth += 5;
+           hanzAnimateBlock();
+            hanzHealth += 5;
       //alert("He avoids the hit with a block!");
     }
-      hanzAnimate(compChoice)
       update()
     }
 
-  function hanzAnimate(type){
+
+  function hanzAnimate(bop){
       $('#hanz').empty();
       $('#hanz').append('<img src="img/hBopf.gif">')
       setTimeout(function(){
@@ -62,6 +64,25 @@ function hanzResponses(){
   function franzResponses(){
   var choice = ['duck', 'block', 'dayDream', "takeHit",];
   var compChoice = choice[Math.floor(Math.random() * choice.length)];
+
+ function franzAnimateDuck(){
+          $('#hanz').empty();
+          $('#hanz').append('<img src="img/fDuck.gif">')
+          setTimeout(function(){
+              $('#hanz').empty();
+              $('#hanz').append('<img src="img/Hanz.png">')
+          }, 500)
+      }
+function   franzAnimateBlock(){
+          $('#hanz').empty();
+          $('#hanz').append('<img src="img/fBlock.gif">')
+          setTimeout(function(){
+              $('#hanz').empty();
+              $('#hanz').append('<img src="img/franz.png">')
+          }, 500)
+      }
+
+
 
   if(compChoice === "duck"){
       franzHealth += 10;
@@ -123,6 +144,7 @@ function reset() {
     update()
 }
 
+// healthbar
 function update() {
     var hanzHealthBarElem = document.getElementById('hanz-health-bar');
     var franzHealthBarElem = document.getElementById('franz-health-bar');
@@ -179,9 +201,10 @@ function update() {
 //     potion:new Item("potion", 0.7,"This is an awesome potion!"),
 // }
 
-//  var player = {
-//     health: 100,
-//     hits: 0,
+ var Hanz = {
+        name: "Hanz",
+        health: 100,
+    img: src="img/Hanz.png",
 //     items:[items.armor],
 //     addMods: function(params) {
 //         var total=0;
@@ -266,6 +289,13 @@ function update() {
 
 //  upDate();
 
-
+function attack (name, modifier, description){
+    this.name = name;
+    this.modifier = modifier;
+    this.description = description;
+    this.draw= function(){
+       document.getElemById('player-items') 
+    }
+}
 
 

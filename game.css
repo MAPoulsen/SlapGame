@@ -54,24 +54,4 @@ margin-top:10px;
     transform: rotate(-90deg);
 }
 
-#hanz{
-    
-}
-
-/*
-@keyframes play {        
-  100%{
-        background-position: -2474px;
-    }
-}
-.run-animation {
- 
-  animation: play .7s steps(7) backwards;
-}*/
-/*#duck {
-   height: 531px;
-    width: 362px;
-    background: url('img/franzDuck.png') left center;
-    cursor: pointer;
-}*/
 
