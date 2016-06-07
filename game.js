@@ -14,7 +14,11 @@ function update() {
 function reset() {
     hanzHealth = 100;
     franzHealth = 100;
+     $('#Hanz').empty();
+            $('#Hanz').append('<img src="img/hanz.png">');
     update();
+      $('#Franz').empty();
+            $('#Franz').append('<img src="img/franz.png">')
 }
 
 
