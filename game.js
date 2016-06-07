@@ -23,6 +23,7 @@ function hanzResponses() {
     var choice = ['duck', 'block', 'dayDream', "takeHit", ];
     var compChoice = choice[Math.floor(Math.random() * choice.length)];
 
+
     function hanzAnimateDuck() {
         $('#Hanz').empty();
         $('#Hanz').append('<img src="img/hDuck.gif">')
@@ -31,6 +32,7 @@ function hanzResponses() {
             $('#Hanz').append('<img src="img/hanz.png">')
         }, 500)
     }
+
     function hanzAnimateBlock() {
         $('#Hanz').empty();
         $('#Hanz').append('<img src="img/HanzBlock.gif">')
@@ -49,7 +51,7 @@ function hanzResponses() {
         hanzHealth += 5;
         //alert("He avoids the hit with a block!");
     }
-    reset()
+    update()
 }
 
 
@@ -86,7 +88,7 @@ function franzResponses() {
         franzHealth += 5;
         //alert("He avoids the hit with a block!");
     }
-    reset()
+    update()
 }
 
 function hanzAnimatePunch() {
