@@ -132,10 +132,10 @@ function hanzKO(){
 }
 function franzKO(){
     $('#Franz').empty();
-    $('#Franz').append('<img src="img/franzKO.gif">')
+    $('#Franz').append('<img src="img/franzKO.gif" style="top: 169px;">')
     setTimeout(function(){
         $('#Franz').empty();
-        $('#Franz').append('<img src="img/franzKO.png">')
+        $('#Franz').append('<img src="img/franzKO.png" style="top: 169px;">')
     },5000)
 }
 
