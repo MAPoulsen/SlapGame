@@ -1,7 +1,7 @@
 
 var hanzHealth = 100;
 var franzHealth = 100;
-var victory = false;
+var victory = 'false';
 
 function update() {
     if(victory === 'false'){
@@ -131,7 +131,7 @@ function franzAnimateJab() {
     }, 500)
 }
 function hanzKO() {
-    victory = true;
+    victory == true;
     $('#Hanz').empty();
     $('#Hanz').append('<img src="img/HanzKO.gif" style="top: 99px;">')
     setTimeout(function () {
@@ -140,7 +140,7 @@ function hanzKO() {
     }, 3000)
 }
 function franzKO() {
-    victory = true;
+    victory == true;
     $('#Franz').empty();
     $('#Franz').append('<img src="img/franzKO.gif" style="top: 169px;">')
     setTimeout(function () {
