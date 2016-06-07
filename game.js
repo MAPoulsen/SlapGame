@@ -139,7 +139,7 @@ function hanzKO() {
     setTimeout(function () {
         $('#Hanz').empty();
         $('#Hanz').append('<img src="img/hanzKO.png" style="top: 99px;">')
-    }, 1000)
+    }, 3000)
 }
 function franzKO() {
     $('#Franz').empty();
