@@ -62,14 +62,15 @@ margin-top:10px;
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
-#franzy{
-    display: center-block;
-    /*position:absolute;*/
-}
-/*#franz-health-bar{
-    position: absolute;
+.progress{ 
+    position:absolute;
     top: 100px;
-    left: 100px;
-}*/
+    left: 50px;
+}
 
-
+.btn-default{
+    border-radius: 10px;
+}
+.well{
+    border-radius: 10px;
+}
