@@ -138,7 +138,7 @@ function hanzKO() {
     setTimeout(function () {
         $('#Hanz').empty();   
         $('#Hanz').append('<img src="img/hanzKO.png" style="top: 54px; right: -68px; height: 385px;">')
-    }, 5000)
+    }, 3000)
 }
 function franzKO() {
     victory = 'true';
