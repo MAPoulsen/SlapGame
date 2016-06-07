@@ -10,10 +10,13 @@ function update() {
 
     hanzHealthBarElem.style.width = hanzHealth + '%';
     franzHealthBarElem.style.width = franzHealth + '%';
+    }else{
+        return
     }
 }
 
 function reset() {
+    victory = 'false';
     hanzHealth = 100;
     franzHealth = 100;
     $('#Hanz').empty();
@@ -133,11 +136,11 @@ function franzAnimateJab() {
 function hanzKO() {
     victory = 'true';
     $('#Hanz').empty();
-    $('#Hanz').append('<img src="img/HanzKO.gif" style="top: 99px;">')
+    $('#Hanz').append('<img src="img/HanzKO.gif" style="top: 72px; height: 365px;">')
     setTimeout(function () {
-        $('#Hanz').empty();
-        $('#Hanz').append('<img src="img/hanzKO.png" style="top: 99px;">')
-    }, 3000)
+        $('#Hanz').empty();   
+        $('#Hanz').append('<img src="img/hanzKO.png" style="top: 54px; right: -68px; height: 385px;">')
+    }, 2000)
 }
 function franzKO() {
     victory = 'true';
