@@ -138,10 +138,10 @@ function hanzKO(){
 }
 function franzKO(){
     $('#Franz').empty();
-    $('#Franz').append('<img src="img/franzKO.gif" style="top: 169px;">')
+    $('#Franz').append('<img src="img/franzKO.gif">')
     setTimeout(function(){
         $('#Franz').empty();
-        $('#Franz').append('<img src="img/franzKO.png" style="top: 169px;">')
+        $('#Franz').append('<img src="img/franzKO.png">')
     },5000)
 }
 
@@ -155,23 +155,24 @@ function hanzPunch() {
     franzHealth -= 10;
     if (franzHealth <= 0) {
         franzKO();      
-    }
+    }else
+    {
     update();
-   
+    }
 }
 
 function franzPunch() {
     franzAnimatePunch();
     setTimeout(function () {
         hanzResponses();
-
     }, 500)
     hanzHealth -= 10;
     if (hanzHealth <= 0) {
         hanzKO();
-    }
+    }else
+    {
     update();
-  
+    }
 }
 
 
@@ -183,10 +184,10 @@ function franzJab() {
     hanzHealth -= 20;
     if (hanzHealth <= 0) {
       hanzKO();
-       
-    }
+    }else
+    {
     update();
-  
+    }
 }
 
 function hanzUnder() {
@@ -197,9 +198,10 @@ function hanzUnder() {
     franzHealth -= 20;
     if (franzHealth <= 0) {
        franzKO();
-    }
+     }else
+    {
     update();
-    
+    }
 }
 
 
