@@ -128,7 +128,7 @@ function hanzKO(){
     setTimeout(function(){
         $('#Hanz').empty();
         $('#Hanz').append('<img src="img/hanzKO.png">')
-    },500)
+    },5000)
 }
 function franzKO(){
     $('#Franz').empty();
@@ -148,10 +148,10 @@ function hanzPunch() {
     }, 500);
     franzHealth -= 10;
     if (franzHealth <= 0) {
-        franzKO();
-        reset();
+        franzKO();      
     }
     update();
+   
 }
 
 function franzPunch() {
@@ -164,7 +164,8 @@ function franzPunch() {
     if (hanzHealth <= 0) {
         hanzKO();
     }
-    update()
+    update();
+  
 }
 
 
@@ -176,9 +177,10 @@ function franzJab() {
     hanzHealth -= 20;
     if (hanzHealth <= 0) {
       hanzKO();
-        reset();
+       
     }
-    update()
+    update();
+  
 }
 
 function hanzUnder() {
@@ -190,7 +192,8 @@ function hanzUnder() {
     if (franzHealth <= 0) {
        franzKO();
     }
-    update()
+    update();
+    
 }
 
 
