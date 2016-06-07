@@ -3,17 +3,14 @@ var hanzHealth = 100;
 var franzHealth = 100;
 var victory = false;
 
-function victory() {
-    if (victory === 'true') {
-        return ('Game Over');
-    }
-}
 function update() {
+    if(victory === 'false'){
     var hanzHealthBarElem = document.getElementById('hanz-health-bar');
     var franzHealthBarElem = document.getElementById('franz-health-bar');
 
     hanzHealthBarElem.style.width = hanzHealth + '%';
     franzHealthBarElem.style.width = franzHealth + '%';
+    }
 }
 
 function reset() {
@@ -134,6 +131,7 @@ function franzAnimateJab() {
     }, 500)
 }
 function hanzKO() {
+    victory = true;
     $('#Hanz').empty();
     $('#Hanz').append('<img src="img/HanzKO.gif" style="top: 99px;">')
     setTimeout(function () {
@@ -142,6 +140,7 @@ function hanzKO() {
     }, 3000)
 }
 function franzKO() {
+    victory = true;
     $('#Franz').empty();
     $('#Franz').append('<img src="img/franzKO.gif" style="top: 169px;">')
     setTimeout(function () {
