@@ -131,7 +131,7 @@ function franzAnimateJab() {
     }, 500)
 }
 function hanzKO() {
-    victory == true;
+    victory = 'true';
     $('#Hanz').empty();
     $('#Hanz').append('<img src="img/HanzKO.gif" style="top: 99px;">')
     setTimeout(function () {
@@ -140,7 +140,7 @@ function hanzKO() {
     }, 3000)
 }
 function franzKO() {
-    victory == true;
+    victory = 'true';
     $('#Franz').empty();
     $('#Franz').append('<img src="img/franzKO.gif" style="top: 169px;">')
     setTimeout(function () {
@@ -152,6 +152,7 @@ function franzKO() {
 
 
 function hanzPunch() {
+    if(victory === 'false'){
     hanzAnimatePunch();
     setTimeout(function () {
         franzResponses();
@@ -164,8 +165,10 @@ function hanzPunch() {
         update();
     }
 }
+}
 
 function franzPunch() {
+     if(victory === 'false'){
     franzAnimatePunch();
     setTimeout(function () {
         hanzResponses();
@@ -177,10 +180,12 @@ function franzPunch() {
     } else {
         update();
     }
+     }
 }
 
 
 function franzJab() {
+     if(victory === 'false'){
     franzAnimateJab();
     setTimeout(function () {
         hanzResponses();
@@ -192,9 +197,11 @@ function franzJab() {
     } else {
         update();
     }
+     }
 }
 
 function hanzUnder() {
+     if(victory === 'false'){
     hanzAnimateUnder();
     setTimeout(function () {
         franzResponses();
@@ -206,6 +213,7 @@ function hanzUnder() {
     } else {
         update();
     }
+     }
 }
 
 
