@@ -3,6 +3,11 @@ var hanzHealth = 100;
 var franzHealth = 100;
 var victory = false;
 
+function victory() {
+    if (victory === 'true') {
+        return ('Game Over');
+    }
+}
 function update() {
     var hanzHealthBarElem = document.getElementById('hanz-health-bar');
     var franzHealthBarElem = document.getElementById('franz-health-bar');
@@ -14,17 +19,17 @@ function update() {
 function reset() {
     hanzHealth = 100;
     franzHealth = 100;
-     $('#Hanz').empty();
-            $('#Hanz').append('<img src="img/hanz.png">');
+    $('#Hanz').empty();
+    $('#Hanz').append('<img src="img/hanz.png">');
     update();
-      $('#Franz').empty();
-            $('#Franz').append('<img src="img/franz.png">')
+    $('#Franz').empty();
+    $('#Franz').append('<img src="img/franz.png">')
 }
 
 
 
 function hanzResponses() {
-    var choice = ['duck', 'block', 'dayDream', "takeHit", ];
+    var choice = ['duck', 'block', 'dayDream', "takeHit",];
     var compChoice = choice[Math.floor(Math.random() * choice.length)];
 
 
@@ -62,7 +67,7 @@ function hanzResponses() {
 
 
 function franzResponses() {
-    var choice = ['duck', 'block', 'dayDream', "takeHit", ];
+    var choice = ['duck', 'block', 'dayDream', "takeHit",];
     var compChoice = choice[Math.floor(Math.random() * choice.length)];
 
     function franzAnimateDuck() {
@@ -128,21 +133,21 @@ function franzAnimateJab() {
         $('#Franz').append('<img src="img/franz.png">')
     }, 500)
 }
-function hanzKO(){
+function hanzKO() {
     $('#Hanz').empty();
     $('#Hanz').append('<img src="img/HanzKO.gif" style="top: 99px;">')
-    setTimeout(function(){
+    setTimeout(function () {
         $('#Hanz').empty();
         $('#Hanz').append('<img src="img/hanzKO.png" style="top: 99px;">')
-    },1000)
+    }, 1000)
 }
-function franzKO(){
+function franzKO() {
     $('#Franz').empty();
     $('#Franz').append('<img src="img/franzKO.gif">')
-    setTimeout(function(){
+    setTimeout(function () {
         $('#Franz').empty();
         $('#Franz').append('<img src="img/franzKO.png">')
-    },5000)
+    }, 5000)
 }
 
 
@@ -154,10 +159,10 @@ function hanzPunch() {
     }, 500);
     franzHealth -= 10;
     if (franzHealth <= 0) {
-        franzKO();      
-    }else
-    {
-    update();
+        franzKO();
+        return
+    } else {
+        update();
     }
 }
 
@@ -169,9 +174,9 @@ function franzPunch() {
     hanzHealth -= 10;
     if (hanzHealth <= 0) {
         hanzKO();
-    }else
-    {
-    update();
+        return
+    } else {
+        update();
     }
 }
 
@@ -183,10 +188,10 @@ function franzJab() {
     }, 500)
     hanzHealth -= 20;
     if (hanzHealth <= 0) {
-      hanzKO();
-    }else
-    {
-    update();
+        hanzKO();
+        return
+    } else {
+        update();
     }
 }
 
@@ -197,10 +202,10 @@ function hanzUnder() {
     }, 500)
     franzHealth -= 20;
     if (franzHealth <= 0) {
-       franzKO();
-     }else
-    {
-    update();
+        franzKO();
+        return
+    } else {
+        update();
     }
 }
 
