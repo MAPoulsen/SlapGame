@@ -128,7 +128,7 @@ function hanzKO(){
     setTimeout(function(){
         $('#Hanz').empty();
         $('#Hanz').append('<img src="img/hanzKO.png">')
-    },5000)
+    },500)
 }
 function franzKO(){
     $('#Franz').empty();
