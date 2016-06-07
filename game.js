@@ -130,11 +130,11 @@ function franzAnimateJab() {
 }
 function hanzKO(){
     $('#Hanz').empty();
-    $('#Hanz').append('<img src="img/HanzKO.gif">')
+    $('#Hanz').append('<img src="img/HanzKO.gif" style="top: 99px;">')
     setTimeout(function(){
         $('#Hanz').empty();
-        $('#Hanz').append('<img src="img/hanzKO.png">')
-    },5000)
+        $('#Hanz').append('<img src="img/hanzKO.png" style="top: 99px;">')
+    },1000)
 }
 function franzKO(){
     $('#Franz').empty();
