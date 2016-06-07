@@ -8,13 +8,13 @@ function update() {
     var franzHealthBarElem = document.getElementById('franz-health-bar');
 
     hanzHealthBarElem.style.width = hanzHealth + '%';
-    franzHealthBarElem.style.width = franzHealth + '%'
+    franzHealthBarElem.style.width = franzHealth + '%';
 }
 
 function reset() {
     hanzHealth = 100;
     franzHealth = 100;
-    update()
+    update();
 }
 
 
@@ -49,7 +49,7 @@ function hanzResponses() {
         hanzHealth += 5;
         //alert("He avoids the hit with a block!");
     }
-    update()
+    reset()
 }
 
 
@@ -86,7 +86,7 @@ function franzResponses() {
         franzHealth += 5;
         //alert("He avoids the hit with a block!");
     }
-    update()
+    reset()
 }
 
 function hanzAnimatePunch() {
