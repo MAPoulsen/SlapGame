@@ -1,0 +1,76 @@
+/*Only use this file if you want to override bootstrap or create your own style*/
+
+h1{
+   font-family: 'Sancreek', cursive;   
+   color: e7ae22;
+   margin-top:0;
+   padding-top:10px;
+    height: 50px;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.container-fluid{
+    background: url(img/SlapGame2.jpg) center center no-repeat;
+    background-size: cover;
+    height: 700px;
+    margin: 0 0 0 0;
+    position: relative;
+}
+.row{
+    text-align: center;
+}
+#hanz{
+    margin: auto;
+text-align:center;
+margin-top:10px;
+}
+
+#Hanz img{
+     position: absolute;
+    top: 75px;
+    right: -64px;
+    height: 328px;
+}
+
+#Franz img{
+    position: absolute;
+      top: 130px;
+    left: -17px;
+    height: 270px;
+}
+
+#franz{  
+    margin: auto;
+text-align:center;
+margin-top:10px;
+}
+.rotate{
+    position: absolute;
+    bottom: -138px;
+    right: 271px;
+    width: 180px;
+}
+.rotate {
+    transition: all .5s linear;
+    margin-top: 100px;
+    width: 160px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.progress{ 
+    position:absolute;
+    top: 100px;
+    left: 50px;
+}
+
+.btn-default{
+    border-radius: 10px;
+}
+.well{
+    border-radius: 7px;
+}
