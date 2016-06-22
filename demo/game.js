@@ -18,7 +18,7 @@ function reset() {
     hanzHealth = 100;
     franzHealth = 100;
     $('#Hanz').empty();
-    $('#Hanz').append('<img src="img/hanz.png">');
+    $('#Hanz').append('<img src="img/Hanz.png">');
     update();
     $('#Franz').empty();
     $('#Franz').append('<img src="img/franz.png">')
@@ -45,7 +45,7 @@ function hanzResponses() {
         $('#Hanz').append('<img src="img/HanzBlock.gif">')
         setTimeout(function () {
             $('#Hanz').empty();
-            $('#Hanz').append('<img src="img/hanz.png">')
+            $('#Hanz').append('<img src="img/Hanz.png">')
         }, 600)
     }
     if (compChoice === "duck") {
@@ -101,7 +101,7 @@ function hanzAnimatePunch() {
     $('#Hanz').append('<img src="img/hBopf.gif" style="top: 34px; right: -67px; height: 365px;">')
     setTimeout(function () {
         $('#Hanz').empty();
-        $('#Hanz').append('<img src="img/hanz.png">')
+        $('#Hanz').append('<img src="img/Hanz.png">')
     }, 600)
 }
 function hanzAnimateUnder() {
@@ -109,7 +109,7 @@ function hanzAnimateUnder() {
     $('#Hanz').append('<img src="img/hUnder.gif" style="height: 317px; right: -40px; top: 84px;">')
     setTimeout(function () {
         $('#Hanz').empty();
-        $('#Hanz').append('<img src="img/hanz.png">')
+        $('#Hanz').append('<img src="img/Hanz.png">')
     }, 600)
 }
 
