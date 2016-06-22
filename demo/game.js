@@ -36,7 +36,7 @@ function hanzResponses() {
         $('#Hanz').append('<img src="img/hDuck.gif">')
         setTimeout(function () {
             $('#Hanz').empty();
-            $('#Hanz').append('<img src="img/hanz.png">')
+            $('#Hanz').append('<img src="img/Hanz.png">')
         }, 600)
     }
 
